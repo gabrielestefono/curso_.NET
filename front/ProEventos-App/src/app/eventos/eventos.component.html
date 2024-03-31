@@ -2,12 +2,12 @@
 <hr>
 <div class="form-inline">
 	<div class="form-group mb-2">
+		<label for="" class="mr-2">Filtro: </label>
 		<input type="text" class="form-control mr-2" 
 		placeholder="Buscar" [(ngModel)]="filtroLista">
-		<button class="btn btn-outline-success" name="filtroLista">Buscar</button>
 	</div>
 </div>
-<h3>Filtro: {{filtroLista}}</h3>
+<!-- <h3>Filtro: {{filtroLista}}</h3> -->
 <table class="table table-striped">
 	<caption>
     Tabela de Eventos
@@ -16,7 +16,7 @@
 		<tr>
 			<th>
 				<button type="button" class="btn btn-outline-light btn-sm" (click)="alterarImagem()">
-					{{mostrarImagem ? 'Ocultar' : 'Exibir'}}
+					{{!mostrarImagem ? 'Ocultar' : 'Exibir'}}
 				</button>
 			</th>
 			<th>#</th>
@@ -44,7 +44,10 @@
 			<td>{{evento.dataEvento}}</td>
 			<td>{{evento.qtdePessoas}}</td>
 			<td>{{evento.lote}}</td>
-			<td></td>
+			<td>
+				<button class="btn btn-primary mr-2">Editar</button>
+				<button class="btn btn-danger">Excluir</button>
+			</td>
 		</tr>
 	</tbody>
 	<tfoot *ngIf="!eventos.length">
