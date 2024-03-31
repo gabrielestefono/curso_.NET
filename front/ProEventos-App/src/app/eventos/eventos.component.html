@@ -5,8 +5,11 @@
 		<input type="text" class="form-control mr-2" placeholder="Buscar">
 		<button class="btn btn-outline-success">Buscar</button>
 	</div>
-</form>
+</form>	
 <table class="table table-striped">
+	<caption>
+    Tabela de Eventos
+  </caption>
 	<thead class="thead-dark">
 		<tr>
 			<th>#</th>
@@ -20,14 +23,14 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+		<tr *ngFor="let evento of eventos">
+			<td>{{evento.eventoId}}</td>
+			<td>{{evento.imageURL}}</td>
+			<td>{{evento.tema}}</td>
+			<td>{{evento.local}}</td>
+			<td>{{evento.dataEvento}}</td>
+			<td>{{evento.qtdePessoas}}</td>
+			<td>{{evento.lote}}</td>
 			<td></td>
 		</tr>
 	</tbody>
