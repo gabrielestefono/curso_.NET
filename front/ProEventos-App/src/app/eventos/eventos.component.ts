@@ -10,6 +10,7 @@ export class EventosComponent implements OnInit {
   larguraImagem: number = 150;
   margemImagem: number = 2;
   mostrarImagem: boolean = false;
+  filtroLista: string = '';
 
   alterarImagem = () => {
     this.mostrarImagem = !this.mostrarImagem;
