@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./eventos.component.scss']
 })
 export class EventosComponent implements OnInit {
-  widthImg: number = 50;
-  marginImg: number = 2;
+  larguraImagem: number = 150;
+  margemImagem: number = 2;
+  mostrarImagem: boolean = false;
+
+  alterarImagem = () => {
+    this.mostrarImagem = !this.mostrarImagem;
+  }
+
   public eventos: any = [];
 
   constructor (private http: HttpClient){
